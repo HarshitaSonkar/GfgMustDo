@@ -24,7 +24,7 @@ int main() {
 	                int sum = arr[i] + arr[j] + arr[low] + arr[high];
 	                if(sum == target){
 	                    flag = 1;
-	                    cout << arr[i] << " " << arr[j] << " " << arr[lo] << " " << arr[hi] << " $";
+	                    cout << arr[i] << " " << arr[j] << " " << arr[low] << " " << arr[high] << " $";
 	                    low++;
 	                    while(low < high && arr[low] == arr[low - 1]) 
                       low++;
