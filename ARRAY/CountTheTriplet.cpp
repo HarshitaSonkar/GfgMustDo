@@ -5,27 +5,31 @@ int main() {
 	//code
 	int t;
 	cin >> t;
-	int n;
-	int a[n];
-	int count = 0;
+	
+	//int a[n];
+
   while(t--){
-	vector<int> res;
-	for(int i = 0; i < n ; i++){
-	    cin >> a[i];
-	    res.push_back(a[i]);
-	  }
-	  sort(res.begin(), res.end());
+      	int count = 0;
+      	int n;
+      	cin >> n;
+      	//int a[n];
+     	vector<int> res(n);
+     	for(int i = 0; i < n ; i++){
+     	    cin >> res[i];
+	        //res.push_back(a[i]);
+	     }
+	     sort(res.begin(), res.end());
 	  
-	  for(int i = n - 1; i > 0; i--){
+	  for(int i = n - 1; i > 1; i--){
 	      int k = 0;
 	      int j = i - 1;
-	      while(k < n){
+	      while(k < j){
 	          
-	          if(a[k] + a[j] == a[i]){
+	          if(res[k] + res[j] == res[i]){
 	              count++;
 	              j--;
 	              
-	          }else if(a[k] + a[j] < a[i]){
+	          }else if(res[k] + res[j] < res[i]){
 	              k++;
 	              
 	          }else{
